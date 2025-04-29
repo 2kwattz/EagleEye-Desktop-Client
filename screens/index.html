@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eagle Eye</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('https://img.goodfon.com/wallpaper/nbig/c/55/cf-18-hornet-hornet-5091.webp') no-repeat center center/cover;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3); /* 50% black */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title {
+      color: white;
+      font-size: 4rem;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff9800, #ffc107);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1 class="title">Eagle Eye</h1>
+    <div class="button-container">
+      <button onclick="checkForUpdates()">Check for Updates</button>
+      <button onclick="viewLogs()">View Logs</button>
+      <button onclick="openSettings()">Settings</button>
+    </div>
+  </div>
+
+  <script>
+    function checkForUpdates() {
+      alert("Checking for updates... (mock)");
+    }
+
+    function viewLogs() {
+      alert("Opening logs... (mock)");
+    }
+
+    function openSettings() {
+      alert("Opening settings... (mock)");
+    }
+  </script>
+</body>
+</html>

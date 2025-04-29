@@ -5,14 +5,17 @@ const express = require('express');
 const DesktopClient = express();
 const PORT = 3000;
 
-// Express route
+// Serve static files from the screens folder
+DesktopClient.use(express.static(path.join(__dirname, 'screens')));
+
+// Route for '/'
 DesktopClient.get('/', (req, res) => {
-  res.send('<h1>Hello from Express!</h1><p>Yes bro, this is running inside Electron.</p>');
+  res.sendFile(path.join(__dirname, 'screens', 'index.html'));
 });
 
 // Start the Express server
 DesktopClient.listen(PORT, () => {
-  console.log(`Express server listening at http://localhost:${PORT}`);
+  console.log(`EagleEye Desktop Client listening at http://localhost:${PORT}`);
 });
 
 function createWindow () {
@@ -25,7 +28,7 @@ function createWindow () {
     }
   });
 
-  // Load Express server URL into Electron window
+  // Load the express server (which serves the HTML)
   win.loadURL(`http://localhost:${PORT}`);
 }
 

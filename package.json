@@ -6,9 +6,14 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^36.0.0"
+    "electron": "^28.1.0",
+    "electron-rebuild": "^3.2.9",
+    "playwright": "^1.52.0"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "@electron/rebuild": "^3.7.2",
+    "express": "^5.1.0",
+    "ffi-napi": "^4.0.3",
+    "node-hide-console-window": "^2.2.0"
   }
 }
